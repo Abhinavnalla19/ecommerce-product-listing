@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopGrid — Product Listing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">ShopGrid</div>
+      <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Discover Products</h1>
+    <p>Search, filter, and find exactly what you need.</p>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search products..." />
+      <button id="search-btn">Search</button>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls">
+    <div class="controls-inner">
+      <div class="filters">
+        <label>Category:</label>
+        <select id="category-filter">
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div class="filters">
+        <label>Sort by Price:</label>
+        <select id="sort-filter">
+          <option value="default">Default</option>
+          <option value="low-high">Low → High</option>
+          <option value="high-low">High → Low</option>
+        </select>
+      </div>
+      <div class="result-count">
+        Showing <span id="result-count">0</span> products
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <main>
+    <div class="grid" id="product-grid">
+      <!-- Cards injected by JS -->
+    </div>
+    <div class="loading" id="loading">Loading products...</div>
+    <div class="no-results hidden" id="no-results">No products found.</div>
+  </main>
+
+  <footer>
+    <p>Built with HTML, CSS & JavaScript · Data from <a href="https://fakestoreapi.com" target="_blank">FakeStoreAPI</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
